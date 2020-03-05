@@ -184,6 +184,7 @@ class App: RComponent<RProps, AppState>() {
                                     )
                                 }
                             }
+                            isFinished = activeGame.winner != null
                         }
                         playerList {
                             players = activeGame.players

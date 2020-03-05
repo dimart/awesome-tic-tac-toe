@@ -171,7 +171,7 @@ class PlayerSessionManager {
         val gameReq = CompletableDeferred<Game>()
         actor.send(GetGame(gameReq))
         gameReq.await()
-    }
+    }.filter { it.winner == null }
 
     @InternalAPI
     private suspend fun collectActiveGamesStatus() = collectActiveGames().map {

@@ -85,9 +85,9 @@ fun CoroutineScope.gameSessionActor(
                 )
             }
             is ClientMessage.Move -> {
-                // TODO: add assertions AND CHECK THAT WINNER IS NOT DETERMINED YET
                 if (game.board[clientMessage.row, clientMessage.col] != ""
-                    || game.lastMoveByPlayer == currPlayer) {
+                    || game.lastMoveByPlayer == currPlayer
+                    || game.winner != null) {
                     return
                 } else {
                     // update model

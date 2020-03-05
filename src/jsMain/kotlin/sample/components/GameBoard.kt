@@ -10,6 +10,7 @@ import styled.*
 interface GameBoardProps: RProps {
     var board: Board
     var onBoardCellClick: (row: Int, col: Int) -> Unit
+    var isFinished: Boolean
 }
 
 class GameBoard: RComponent<GameBoardProps, RState>() {
@@ -41,6 +42,7 @@ class GameBoard: RComponent<GameBoardProps, RState>() {
                                     verticalAlign = VerticalAlign.middle
                                     cursor = Cursor.pointer
                                     fontSize = LinearDimension.fillAvailable
+                                    backgroundColor = if (props.isFinished) Color.gold else Color.unset
                                 }
                                 attrs {
                                     onClickFunction = {
