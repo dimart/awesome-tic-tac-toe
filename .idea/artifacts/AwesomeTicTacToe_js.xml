@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AwesomeTicTacToe-js">
+    <output-path>$PROJECT_DIR$/build/libs</output-path>
+    <root id="archive" name="AwesomeTicTacToe-js.jar">
+      <element id="module-output" name="AwesomeTicTacToe.jsMain" />
+    </root>
+  </artifact>
+</component>
